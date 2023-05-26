@@ -1,32 +1,34 @@
 function threeSum(arr, target) {
 // write your code here
-	
-{
-	let arr = new Array(33);
 
-	// counter for binary array
-	let i = 0;
-	while (n > 0) {
 
-		// storing remainder in binary array
-		arr[i] = n % 2;
-		n = Math.floor(n / 2);
-		i++;
-	}
+	function decimalToBinary(decimal) {
+  // Check if the input is a valid decimal number
+  if (isNaN(decimal) || decimal < 0 || decimal % 1 !== 0) {
+    return "Invalid input. Please enter a non-negative integer.";
+  }
 
-	// printing binary array in reverse order
-	for (let j = i - 1; j >= 0; j--)
-		document.write(arr[j]);
+  // Handle the special case of decimal number 0
+  if (decimal === 0) {
+    return "0";
+  }
+
+  let binary = "";
+
+  // Convert decimal to binary
+  while (decimal > 0) {
+    binary = (decimal % 2) + binary;
+    decimal = Math.floor(decimal / 2);
+  }
+
+  return binary;
 }
 
+// Example usage
+const decimalNumber = 42;
+const binaryNumber = decimalToBinary(decimalNumber);
+console.log("Binary representation:", binaryNumber);
 
-	let n = 17;
-	decToBinary(n);
-
-// take input
-let number = prompt('Enter a decimal number: ');
-
-convertToBinary(number);
 
 
 
